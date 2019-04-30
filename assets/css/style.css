@@ -1,5 +1,8 @@
 body {
     background-image: url(../moola.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 h1 {
@@ -31,6 +34,7 @@ th {
     margin-top: 10pt;
     margin-bottom: 10pt; 
     background-color: white;
+    position: static;
 }
 
 .container2 {

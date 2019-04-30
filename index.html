@@ -10,18 +10,19 @@
     <link rel="stylesheet" type="text/css" href="../Timesheet/assets/css/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
     <title>Employee Data Management</title>
-    
+
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Employee Data Management</h1>
-            <h3>A Comprehensive Directory of Employee Billable Hours</h3>
-        </div>
-        <div class="container2"><h5>Current Employees</h5>
-            <div class="currentEmployees">
+    <section>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Employee Data Management</h1>
+                <h3>A Comprehensive Directory of Employee Billable Hours</h3>
+            </div>
+            <div class="container2">
+                <h5>Current Employees</h5>
+                <div class="currentEmployees">
                     <table class="table" id="employees">
                         <thead>
 
@@ -39,35 +40,36 @@
                         </tbody>
                     </table>
                 </div>
-        </div>
+            </div>
 
-        <div class="container3">
-            <form>
-                <div class="form-group"><h5>Add Employee</h5>
-                    <label for="employee-name">Employee Name</label>
+            <div class="container3">
+                <form>
+                    <div class="form-group">
+                        <h5>Add Employee</h5>
+                        <label for="employee-name">Employee Name</label>
 
-                    <input type="search" class="form-control" id="employee-name">
-                </div>
-                <div class="form-group">
-                    <label for="role">Role</label>
-                    <input type="search" class="form-control" id="employee-role">
-                </div>
-                <div class="form-group">
+                        <input type="search" class="form-control" id="employee-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <input type="search" class="form-control" id="employee-role">
+                    </div>
+                    <div class="form-group">
                         <label for="start-date">Start Date (MM/DD/YYYY)</label>
                         <input type="search" class="form-control" id="start-date">
                     </div>
-                <div class="form-group">
+                    <div class="form-group">
                         <label for="rate">Montly Rate</label>
                         <input type="search" class="form-control" id="rate">
-                        </div>
-                <button type="search" id="submit" class="btn btn-primary">Submit</button>
-            </form>
+                    </div>
+                    <button type="search" id="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
 
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="../Timesheet/assets/javascript/app.js"></script>
-
 </body>
 
 </html>

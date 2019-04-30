@@ -23,11 +23,33 @@ $("#submit").on("click", function (event) {
 
  database.ref().push({
     name: employeeName,
-    email: employeeRole,
-    age: startDate,
-    comment: rate
+    role: employeeRole,
+    start: startDate,
+    rate: rate
   });
  
+}); 
+
+
+database.ref().on("child_added", function(snapshot) { 
+
+    var sv = snapshot.val();
+     // Create the new row
+
+     console.log(sv.name)
+     console.log(sv.role)
+     console.log(sv.start)
+     console.log(sv.rate)
+     var newRow = $("<tr>").append(
+        $("<td>").text(sv.name),
+        $("<td>").text(sv.role),
+        $("<td>").text(sv.start),
+        $("<td>").text(sv.rate)
+    );
+    // Append the new row to the table
+    $("#rowadd").append(newRow);
+
+
 }); 
 
 

@@ -41,7 +41,7 @@ database.ref().on("child_added", function(snapshot) {
      console.log(sv.start)
      console.log(sv.rate)
      var newRow = $("<tr>").append(
-        $("<td>").text(sv.name),
+        $("<td>").text(snapshot.val().name),
         $("<td>").text(sv.role),
         $("<td>").text(sv.start),
         $("<td>").text(sv.rate)

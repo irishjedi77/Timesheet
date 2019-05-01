@@ -34,18 +34,18 @@ $("#submit").on("click", function (event) {
 database.ref().on("child_added", function(snapshot) { 
 
     var sv = snapshot.val();
-     // Create the new row
+    
 
-     console.log(sv.name)
-     console.log(sv.role)
-     console.log(sv.start)
-     console.log(sv.rate)
+    //calculates months worked
+    var date = moment(sv.start).format("MM/DD/YY")
+    var difTime = moment().diff(moment(date), "months"); 
+    console.log(difTime); 
 
      var newRow = $("<tr>").append(
         $("<td>").text(snapshot.val().name),
         $("<td>").text(sv.role),
         $("<td>").text(sv.start),
-        $("<td>").text(sv.rate),
+        $("<td>").text(difTime),
         $("<td>").text(100),
         $("<td>").text(100)
     );

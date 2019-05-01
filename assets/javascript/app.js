@@ -52,6 +52,16 @@ database.ref().on("child_added", function(snapshot) {
     // Append the new row to the table
     $("#employees tbody").append(newRow);
 
+    var startDate = start;
+    var randomFormat = "MM/DD/YYYY";
+    var convertedDate = moment(startDate, randomFormat);
+
+    console.log(convertedDate.format("MM/DD/YY"));
+    console.log(convertedDate.format("MMM Do, YYYY hh:mm:ss"));
+    console.log(convertedDate.format("w"));
+    console.log("----------------------------------------");
+    console.log(convertedDate.toNow());
+
 
 }); 
 

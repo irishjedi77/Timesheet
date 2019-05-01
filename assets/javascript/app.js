@@ -41,13 +41,16 @@ database.ref().on("child_added", function(snapshot) {
     var difTime = moment().diff(moment(date), "months"); 
     console.log(difTime); 
 
+    var moneyMade = difTime * parseInt(sv.rate); 
+    
+
      var newRow = $("<tr>").append(
         $("<td>").text(snapshot.val().name),
         $("<td>").text(sv.role),
         $("<td>").text(sv.start),
         $("<td>").text(difTime),
-        $("<td>").text(100),
-        $("<td>").text(100)
+        $("<td>").text(sv.rate),
+        $("<td>").text(moneyMade)
     );
     // Append the new row to the table
     $("#employees tbody").append(newRow);
